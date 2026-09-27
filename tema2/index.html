@@ -1,12 +1,66 @@
-<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>La meva classe</title><style>
-*{box-sizing:border-box}body{margin:0;background:#fffaf1;color:#173f4f;font-family:Arial,sans-serif}
-main{max-width:1120px;margin:auto;padding:32px 20px 70px}.back{color:#3f76a8;text-decoration:none;font-weight:900}
-h1{font-size:clamp(48px,7vw,78px);line-height:.95;margin:10px 0 18px}.lead{font-size:20px;line-height:1.5;color:#587078}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}.card{border-radius:22px;padding:24px;min-height:230px;color:#173f4f;text-decoration:none;display:flex;flex-direction:column}
-.c1{background:#ffe4d7}.c2{background:#fff0bd}.c3{background:#dcefeb}.cv{background:#e8e1f5}.cd{background:#dfeaf7}
-.ico{font-size:48px;margin:18px 0}.go{margin-top:auto;font-weight:900}.ey{font-weight:900;letter-spacing:.09em;color:#56817f}
-.box{background:white;border:1px solid #ddd;border-radius:16px;padding:18px;margin:12px 0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-audio{width:100%}textarea{width:100%;min-height:135px;border:2px solid #d5e1ea;border-radius:12px;padding:14px;font:17px Arial;line-height:1.5}
-button{border:0;border-radius:10px;padding:11px 14px;background:#3f76a8;color:white;font-weight:900;cursor:pointer}.solution{display:none;background:#eef4fa;border-radius:12px;padding:15px;margin-top:12px;line-height:1.55}.solution.open{display:block}
-@media(max-width:720px){.cards,.grid{grid-template-columns:1fr}}
-</style></head><body><main><a class="back" href="../index.html">← Tornar a Comencem!</a><div class="ey">CATALÀ INICIAL</div><h1>La meva classe</h1><div class="grid"><div class="box">📖 el llibre</div><div class="box">📓 la llibreta</div><div class="box">✏️ el llapis</div><div class="box">🖊️ el bolígraf</div><div class="box">🎒 la motxilla</div><div class="box">📏 el regle</div><div class="box">🪑 la cadira</div><div class="box">🖥️ l&#x27;ordinador</div><div class="box">💬 Pots repetir, si us plau?</div><div class="box">❓ Què vol dir?</div><div class="box">🙋 Necessito ajuda.</div><div class="box">✓ He acabat.</div></div></main></body></html>
+<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>La meva classe</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fffaf1;color:#173f4f;font-family:Arial,sans-serif}main{max-width:1120px;margin:auto;padding:32px 20px 70px}.back{color:#b28b18;text-decoration:none;font-weight:900}.ey{margin-top:34px;color:#9b7917;font-weight:900;letter-spacing:.09em}.title{font-size:clamp(48px,7vw,76px);line-height:.95;margin:8px 0 15px}.lead{font-size:20px;line-height:1.5;color:#587078}h2{font-size:30px;margin-top:40px}
+.vocab{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.word{background:white;border:1px solid #eadfbd;border-radius:15px;padding:16px;text-align:center}.word .ico{font-size:38px;display:block;margin-bottom:7px}.word b{font-size:18px}
+.useful{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.phrase{background:#fff0bd;border-radius:14px;padding:16px;font-size:18px;line-height:1.4}.phrase small{display:block;color:#6d735f;margin-top:5px}
+.model{background:#dcefeb;border-radius:18px;padding:20px;font-size:19px;line-height:1.7}.focus{background:#f6d365;border-radius:5px;padding:2px 5px;font-weight:900}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.tab{border:2px solid #e4d9b9;background:#fff;border-radius:13px;padding:14px;text-align:left;color:#173f4f;font-weight:900;cursor:pointer}.tab span{display:block;font-size:12px;font-weight:normal;color:#6b7e83;margin-top:4px}.tab.active{background:#fff0bd;border-color:#d5b84d}
+.exercise{display:none;background:#fff;border:1px solid #eadfbd;border-radius:18px;padding:23px;margin-top:14px}.exercise.open{display:block}.question{text-align:center;font-size:29px;font-weight:900;margin:18px;line-height:1.35}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choice{border:2px solid #e5decb;border-radius:11px;padding:13px;cursor:pointer}.btn{border:0;border-radius:9px;padding:11px 15px;background:#c49a22;color:#fff;font-weight:900;cursor:pointer;margin-top:14px}.feedback{margin-top:12px;padding:10px}.score{text-align:center;font-size:68px;font-weight:900;color:#c49a22}.tip{background:#fff7dc;border-radius:15px;padding:17px;line-height:1.5}
+@media(max-width:760px){.vocab{grid-template-columns:repeat(2,1fr)}.useful,.tabs,.choices{grid-template-columns:1fr}}
+</style></head><body><main>
+<a class="back" href="../index.html">← Tornar a Comencem!</a><div class="ey">TEMA 02 · CATALÀ INICIAL</div><h1 class="title">La meva classe</h1>
+<p class="lead">Aprendrem paraules de <b>l'aula</b> i frases que pots necessitar cada dia per entendre't amb el professorat i els companys.</p>
+
+<h2>🎒 Què hi ha a classe?</h2><section class="vocab">
+<div class="word"><span class="ico">📖</span><b>el llibre</b></div><div class="word"><span class="ico">📓</span><b>la llibreta</b></div>
+<div class="word"><span class="ico">✏️</span><b>el llapis</b></div><div class="word"><span class="ico">🖊️</span><b>el bolígraf</b></div>
+<div class="word"><span class="ico">🎒</span><b>la motxilla</b></div><div class="word"><span class="ico">📏</span><b>el regle</b></div>
+<div class="word"><span class="ico">🪑</span><b>la cadira</b></div><div class="word"><span class="ico">🚪</span><b>la porta</b></div>
+<div class="word"><span class="ico">🖥️</span><b>l'ordinador</b></div><div class="word"><span class="ico">📄</span><b>el full</b></div>
+<div class="word"><span class="ico">🧑‍🏫</span><b>el professor / la professora</b></div><div class="word"><span class="ico">👥</span><b>els companys / les companyes</b></div>
+</section>
+
+<h2>💬 Frases que em salven</h2><section class="useful">
+<div class="phrase"><b>No ho entenc.</b><small>Quan no entens alguna cosa.</small></div>
+<div class="phrase"><b>Pots repetir, si us plau?</b><small>Quan necessites tornar-ho a sentir.</small></div>
+<div class="phrase"><b>Què vol dir ___?</b><small>Quan no coneixes una paraula.</small></div>
+<div class="phrase"><b>Com es diu ___ en català?</b><small>Per aprendre una paraula nova.</small></div>
+<div class="phrase"><b>Puc anar al lavabo?</b><small>Per demanar permís.</small></div>
+<div class="phrase"><b>Puc entrar?</b><small>Quan arribes a la porta de l'aula.</small></div>
+<div class="phrase"><b>Necessito ajuda.</b><small>Quan no pots continuar sol/a.</small></div>
+<div class="phrase"><b>He acabat.</b><small>Quan ja has acabat la feina.</small></div>
+</section>
+
+<h2>🧩 Mira una situació</h2><div class="model"><b>Professor:</b> Obriu el llibre per la pàgina vint.<br><b>Alumne:</b> <span class="focus">Pots repetir, si us plau?</span><br><b>Professor:</b> Sí. Obriu el llibre per la pàgina vint.<br><b>Alumne:</b> Gràcies!</div>
+<div class="tip">💡 <b>Objectiu:</b> no cal entendre totes les paraules. Aprèn primer les frases que et permeten <b>preguntar, demanar ajuda i continuar la classe</b>.</div>
+
+<h2>✏️ Practiquem</h2><div class="tabs">
+<button class="tab" data-mode="vocab">01 · Vocabulari<span>Quina paraula és?</span></button>
+<button class="tab" data-mode="situation">02 · Què dic?<span>Tria la frase útil.</span></button>
+<button class="tab" data-mode="instruction">03 · A classe<span>Entén instruccions senzilles.</span></button>
+<button class="tab" data-mode="test">04 · Posa't a prova!<span>10 preguntes · nota final.</span></button></div><div id="app" class="exercise"></div>
+</main><script>
+const vocab=[
+["📖","el llibre",["el llibre","la llibreta","el full"]],["📓","la llibreta",["la llibreta","la motxilla","la cadira"]],["✏️","el llapis",["el llapis","el bolígraf","el regle"]],["🖊️","el bolígraf",["el bolígraf","el llapis","el llibre"]],["🎒","la motxilla",["la motxilla","la porta","la llibreta"]],["📏","el regle",["el regle","el full","el llapis"]],["🪑","la cadira",["la cadira","la porta","la motxilla"]],["🖥️","l'ordinador",["l'ordinador","el llibre","el regle"]],["📄","el full",["el full","el llibre","la llibreta"]]
+];
+const situation=[
+["No entens el professor.","Pots repetir, si us plau?",["Pots repetir, si us plau?","He acabat.","Puc entrar?"]],
+["No saps què significa una paraula.","Què vol dir?",["Què vol dir?","Puc anar al lavabo?","Bon dia!"]],
+["Vols saber una paraula en català.","Com es diu en català?",["Com es diu en català?","Quants anys tens?","On vius?"]],
+["Necessites que t'ajudin.","Necessito ajuda.",["Necessito ajuda.","He acabat.","Fins demà!"]],
+["Vols anar al lavabo.","Puc anar al lavabo?",["Puc anar al lavabo?","Pots repetir?","Què vol dir?"]],
+["Ja has fet tota la feina.","He acabat.",["He acabat.","No ho entenc.","Puc entrar?"]]
+];
+const instruction=[
+["«Obre el llibre.» Què necessites?","el llibre",["el llibre","la motxilla","el regle"]],
+["«Escriu a la llibreta.» Què necessites?","la llibreta",["la llibreta","la porta","la cadira"]],
+["«Agafa un full.» Què has d'agafar?","un full",["un full","un llibre","una motxilla"]],
+["«Seu a la cadira.» Què has de fer?","seure",["seure","escriure","sortir"]],
+["«Tanca la porta.» Què has de tancar?","la porta",["la porta","el llibre","l'ordinador"]],
+["«Escolta.» Què has de fer?","escoltar",["escoltar","escriure","entrar"]]
+];
+let mode="",test=[],i=0,score=0;const app=document.getElementById("app");function sh(a){return [...a].sort(()=>Math.random()-.5)}
+function draw(x,m){let prompt=m==="vocab"?`Què és això? <span style="font-size:55px;display:block;margin-top:10px">${x[0]}</span>`:x[0];app.innerHTML=`<div class="question">${prompt}</div><div class="choices">${sh(x[2]).map(v=>`<label class="choice"><input type="radio" name="a" value="${v}"> ${v}</label>`).join("")}</div><button class="btn" id="check">Comprova</button><div id="fb" class="feedback"></div>`;check.onclick=()=>{let r=document.querySelector('[name=a]:checked');if(!r)return;fb.innerHTML=r.value===x[1]?"Molt bé! ✓":`La resposta correcta és <b>${x[1]}</b>.`}}
+function startTest(){test=sh([...vocab,...situation,...instruction]).slice(0,10);i=0;score=0;tq()}function tq(){if(i===10){app.innerHTML=`<div class="score">${score}/10</div><p style="text-align:center">Prova acabada!</p>`;return}let x=test[i],isV=typeof x[0]==="string"&&["📖","📓","✏️","🖊️","🎒","📏","🪑","🖥️","📄"].includes(x[0]);let prompt=isV?`Què és això? <span style="font-size:55px;display:block">${x[0]}</span>`:x[0];app.innerHTML=`<b>Pregunta ${i+1} de 10</b><div class="question">${prompt}</div><div class="choices">${sh(x[2]).map(v=>`<label class="choice"><input type="radio" name="t" value="${v}"> ${v}</label>`).join("")}</div><button class="btn" id="next">Següent →</button>`;next.onclick=()=>{let r=document.querySelector('[name=t]:checked');if(!r)return;if(r.value===x[1])score++;i++;tq()}}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");app.classList.add("open");mode=b.dataset.mode;if(mode==="test")startTest();else{let bank=mode==="vocab"?vocab:mode==="situation"?situation:instruction;draw(bank[Math.floor(Math.random()*bank.length)],mode)}});
+</script></body></html>

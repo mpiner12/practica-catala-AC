@@ -1,12 +1,57 @@
-<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>El meu dia</title><style>
-*{box-sizing:border-box}body{margin:0;background:#fffaf1;color:#173f4f;font-family:Arial,sans-serif}
-main{max-width:1120px;margin:auto;padding:32px 20px 70px}.back{color:#3f76a8;text-decoration:none;font-weight:900}
-h1{font-size:clamp(48px,7vw,78px);line-height:.95;margin:10px 0 18px}.lead{font-size:20px;line-height:1.5;color:#587078}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}.card{border-radius:22px;padding:24px;min-height:230px;color:#173f4f;text-decoration:none;display:flex;flex-direction:column}
-.c1{background:#ffe4d7}.c2{background:#fff0bd}.c3{background:#dcefeb}.cv{background:#e8e1f5}.cd{background:#dfeaf7}
-.ico{font-size:48px;margin:18px 0}.go{margin-top:auto;font-weight:900}.ey{font-weight:900;letter-spacing:.09em;color:#56817f}
-.box{background:white;border:1px solid #ddd;border-radius:16px;padding:18px;margin:12px 0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-audio{width:100%}textarea{width:100%;min-height:135px;border:2px solid #d5e1ea;border-radius:12px;padding:14px;font:17px Arial;line-height:1.5}
-button{border:0;border-radius:10px;padding:11px 14px;background:#3f76a8;color:white;font-weight:900;cursor:pointer}.solution{display:none;background:#eef4fa;border-radius:12px;padding:15px;margin-top:12px;line-height:1.55}.solution.open{display:block}
-@media(max-width:720px){.cards,.grid{grid-template-columns:1fr}}
-</style></head><body><main><a class="back" href="../index.html">← Tornar a Comencem!</a><div class="ey">CATALÀ INICIAL</div><h1>El meu dia</h1><div class="grid"><div class="box">⏰ em llevo</div><div class="box">🚿 em dutxo</div><div class="box">🥛 esmorzo</div><div class="box">🎒 vaig a l&#x27;institut</div><div class="box">🍽️ dino</div><div class="box">📚 faig els deures</div><div class="box">🍲 sopo</div><div class="box">🛏️ vaig a dormir</div><div class="box">🌅 al matí</div><div class="box">☀️ al migdia</div><div class="box">🌤️ a la tarda</div><div class="box">🌙 a la nit</div></div></main></body></html>
+<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>El meu dia</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fffaf1;color:#173f4f;font-family:Arial,sans-serif}main{max-width:1120px;margin:auto;padding:32px 20px 70px}.back{color:#408c86;text-decoration:none;font-weight:900}.ey{margin-top:34px;color:#408c86;font-weight:900;letter-spacing:.09em}.title{font-size:clamp(48px,7vw,76px);line-height:.95;margin:8px 0 15px}.lead{font-size:20px;line-height:1.5;color:#587078}h2{font-size:30px;margin-top:40px}
+.day{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.action{background:#fff;border:1px solid #cfe1df;border-radius:15px;padding:16px;text-align:center}.action .ico{font-size:39px;display:block;margin-bottom:7px}.action b{font-size:18px}
+.time{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.timebox{background:#dcefeb;border-radius:14px;padding:18px;text-align:center}.timebox .ico{font-size:38px}.timebox b{display:block;font-size:20px;margin:6px}
+.model{background:#e4f2ef;border-radius:18px;padding:21px;font-size:19px;line-height:1.75}.focus{background:#f6d365;border-radius:5px;padding:2px 5px;font-weight:900}
+.clock-note{background:#fff1c9;border-radius:15px;padding:17px;line-height:1.55}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.tab{border:2px solid #cfe1df;background:#fff;border-radius:13px;padding:14px;text-align:left;color:#173f4f;font-weight:900;cursor:pointer}.tab span{display:block;font-size:12px;font-weight:normal;color:#6b7e83;margin-top:4px}.tab.active{background:#dcefeb;border-color:#83bdb7}
+.exercise{display:none;background:#fff;border:1px solid #cfe1df;border-radius:18px;padding:23px;margin-top:14px}.exercise.open{display:block}.question{text-align:center;font-size:29px;font-weight:900;margin:18px;line-height:1.35}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choice{border:2px solid #d8e4e2;border-radius:11px;padding:13px;cursor:pointer}.btn{border:0;border-radius:9px;padding:11px 15px;background:#4e9d96;color:#fff;font-weight:900;cursor:pointer;margin-top:14px}.feedback{margin-top:12px;padding:10px}.score{text-align:center;font-size:68px;font-weight:900;color:#4e9d96}
+@media(max-width:760px){.day{grid-template-columns:repeat(2,1fr)}.time,.tabs,.choices{grid-template-columns:1fr}}
+</style></head><body><main>
+<a class="back" href="../index.html">← Tornar a Comencem!</a><div class="ey">TEMA 03 · CATALÀ INICIAL</div><h1 class="title">El meu dia</h1>
+<p class="lead">Aprendrem a parlar de les <b>rutines</b>, dels moments del dia i de les <b>hores</b>.</p>
+
+<h2>🌅 Què faig cada dia?</h2><section class="day">
+<div class="action"><span class="ico">⏰</span><b>em llevo</b><p>Em llevo a les set.</p></div>
+<div class="action"><span class="ico">🚿</span><b>em dutxo</b><p>Em dutxo al matí.</p></div>
+<div class="action"><span class="ico">🥛</span><b>esmorzo</b><p>Esmorzo a casa.</p></div>
+<div class="action"><span class="ico">🎒</span><b>vaig a l'institut</b><p>Hi vaig al matí.</p></div>
+<div class="action"><span class="ico">🍽️</span><b>din(o)</b><p>Dino al migdia.</p></div>
+<div class="action"><span class="ico">📚</span><b>faig els deures</b><p>Faig els deures a la tarda.</p></div>
+<div class="action"><span class="ico">🍲</span><b>sopo</b><p>Sopo al vespre.</p></div>
+<div class="action"><span class="ico">🛏️</span><b>vaig a dormir</b><p>Vaig a dormir a la nit.</p></div>
+</section>
+
+<h2>☀️ Quan?</h2><section class="time">
+<div class="timebox"><span class="ico">🌅</span><b>al matí</b><span>Em llevo i esmorzo.</span></div>
+<div class="timebox"><span class="ico">☀️</span><b>al migdia</b><span>Dino.</span></div>
+<div class="timebox"><span class="ico">🌤️</span><b>a la tarda</b><span>Faig els deures.</span></div>
+<div class="timebox"><span class="ico">🌆</span><b>al vespre</b><span>Sopo.</span></div>
+<div class="timebox"><span class="ico">🌙</span><b>a la nit</b><span>Vaig a dormir.</span></div>
+<div class="timebox"><span class="ico">📅</span><b>cada dia</b><span>De dilluns a diumenge.</span></div>
+</section>
+
+<h2>🕒 Quina hora és?</h2><div class="clock-note"><b>És la una.</b> 🕐 &nbsp; · &nbsp; <b>Són les dues.</b> 🕑 &nbsp; · &nbsp; <b>Són les vuit.</b> 🕗<br><br>Per dir quan fem una cosa: <b>a la una</b> · <b>a les dues</b> · <b>a les vuit</b>.</div>
+
+<h2>🧩 Mira el model</h2><div class="model">Cada dia <span class="focus">em llevo a les set</span>. <span class="focus">Esmorzo</span> i vaig a l'institut. <span class="focus">Dino al migdia</span>. A la tarda faig els deures. <span class="focus">Sopo a les nou</span> i vaig a dormir a les onze.</div>
+
+<h2>✏️ Practiquem</h2><div class="tabs">
+<button class="tab" data-mode="routine">01 · Rutines<span>Què està fent?</span></button>
+<button class="tab" data-mode="when">02 · Quan?<span>Matí, tarda, vespre...</span></button>
+<button class="tab" data-mode="hour">03 · Les hores<span>Tria la forma correcta.</span></button>
+<button class="tab" data-mode="test">04 · Posa't a prova!<span>10 preguntes · nota final.</span></button></div><div id="app" class="exercise"></div>
+</main><script>
+const routine=[
+["⏰ Què faig?","em llevo",["em llevo","sopo","dino"]],["🚿 Què faig?","em dutxo",["em dutxo","esmorzo","dormo"]],["🥛 Què faig?","esmorzo",["esmorzo","sopo","faig els deures"]],["🎒 Què faig?","vaig a l'institut",["vaig a l'institut","vaig a dormir","dino"]],["🍽️ Què faig?","dino",["dino","esmorzo","em llevo"]],["📚 Què faig?","faig els deures",["faig els deures","sopo","em dutxo"]],["🍲 Què faig?","sopo",["sopo","dino","esmorzo"]],["🛏️ Què faig?","vaig a dormir",["vaig a dormir","vaig a l'institut","em llevo"]]
+];
+const when=[
+["Quan esmorzo normalment?","al matí",["al matí","a la nit","al vespre"]],["Quan dino?","al migdia",["al migdia","a la nit","al matí"]],["Quan puc fer els deures després de classe?","a la tarda",["a la tarda","al matí","a la nit"]],["Quan sopo?","al vespre",["al vespre","al migdia","al matí"]],["Quan vaig a dormir?","a la nit",["a la nit","al migdia","al matí"]]
+];
+const hour=[
+["🕐 Quina hora és?","És la una.",["És la una.","Són la una.","Són les una."]],["🕑 Quina hora és?","Són les dues.",["Són les dues.","És les dues.","És la dues."]],["🕗 Quina hora és?","Són les vuit.",["Són les vuit.","És la vuit.","Són la vuit."]],["Em llevo ___ set.","a les",["a les","a la","les"]],["Dino ___ una.","a la",["a la","a les","la"]],["Sopo ___ nou.","a les",["a les","a la","les"]]
+];
+let mode="",test=[],i=0,score=0;const app=document.getElementById("app");function sh(a){return [...a].sort(()=>Math.random()-.5)}
+function draw(x){app.innerHTML=`<div class="question">${x[0]}</div><div class="choices">${sh(x[2]).map(v=>`<label class="choice"><input type="radio" name="a" value="${v}"> ${v}</label>`).join("")}</div><button class="btn" id="check">Comprova</button><div id="fb" class="feedback"></div>`;check.onclick=()=>{let r=document.querySelector('[name=a]:checked');if(!r)return;fb.innerHTML=r.value===x[1]?"Molt bé! ✓":`La resposta correcta és <b>${x[1]}</b>.`}}
+function startTest(){test=sh([...routine,...when,...hour]).slice(0,10);i=0;score=0;tq()}function tq(){if(i===10){app.innerHTML=`<div class="score">${score}/10</div><p style="text-align:center">Prova acabada!</p>`;return}let x=test[i];app.innerHTML=`<b>Pregunta ${i+1} de 10</b><div class="question">${x[0]}</div><div class="choices">${sh(x[2]).map(v=>`<label class="choice"><input type="radio" name="t" value="${v}"> ${v}</label>`).join("")}</div><button class="btn" id="next">Següent →</button>`;next.onclick=()=>{let r=document.querySelector('[name=t]:checked');if(!r)return;if(r.value===x[1])score++;i++;tq()}}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");app.classList.add("open");mode=b.dataset.mode;if(mode==="test")startTest();else{let bank=mode==="routine"?routine:mode==="when"?when:hour;draw(bank[Math.floor(Math.random()*bank.length)])}});
+</script></body></html>
