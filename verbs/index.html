@@ -11,6 +11,16 @@ summary::-webkit-details-marker{display:none}.emoji{font-size:30px}.arrow{margin
 .inside{border-top:1px solid #e5deec;padding:8px 15px 15px}.row{display:flex;justify-content:space-between;gap:8px;padding:9px 2px;border-bottom:1px solid #f0ebf4;font-size:15px}
 .row span{color:#61747b}.row b{color:#173f4f;text-align:right}.example{margin-top:12px;background:#fff1c9;border-radius:10px;padding:10px;font-size:14px;line-height:1.4}
 @media(max-width:950px){.verbs{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.verbs{grid-template-columns:1fr}}
+
+.practice-title{margin-top:52px}.levels{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:16px}
+.level{border:2px solid #ded5e9;background:#fff;border-radius:13px;padding:14px;text-align:left;color:#684b95;font-weight:900;cursor:pointer}
+.level span{display:block;font-size:12px;font-weight:normal;color:#6b7e83;margin-top:4px}.level.active{background:#e8e1f5;border-color:#9b82bb}
+.exercise{display:none;background:#fff;border:2px solid #ded5e9;border-radius:18px;padding:24px;margin-top:14px}.exercise.open{display:block}
+.progress{font-size:13px;font-weight:900;color:#7959a8}.question{text-align:center;font-size:28px;font-weight:900;margin:20px;line-height:1.35}
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choice{border:2px solid #e5deec;border-radius:11px;padding:13px;cursor:pointer}
+.btn{border:0;border-radius:9px;padding:11px 15px;background:#7959a8;color:#fff;font-weight:900;cursor:pointer;margin-top:14px}
+.feedback{margin-top:12px;padding:10px}.score{text-align:center;font-size:66px;font-weight:900;color:#7959a8}
+@media(max-width:950px){.levels{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.levels,.choices{grid-template-columns:1fr}}
 </style></head><body><main><a class="back" href="../index.html">← Tornar a Comencem!</a><div class="ey">🔤 RACÓ DELS VERBS</div><h1>Els verbs que necessito</h1>
 <p class="lead">Tria un verb per veure com canvia amb <b>jo, tu, ell/ella, nosaltres, vosaltres i ells/elles</b>.</p>
 <div class="note">💡 <b>Clica el verb que necessites.</b> La conjugació es desplegarà a sota i la podràs tornar a tancar quan vulguis.</div>
@@ -25,4 +35,78 @@ summary::-webkit-details-marker{display:none}.emoji{font-size:30px}.arrow{margin
 <div class="row"><span>jo</span><b>dormo</b></div><div class="row"><span>tu</span><b>dorms</b></div><div class="row"><span>ell / ella</span><b>dorm</b></div><div class="row"><span>nosaltres</span><b>dormim</b></div><div class="row"><span>vosaltres</span><b>dormiu</b></div><div class="row"><span>ells / elles</span><b>dormen</b></div><div class="example">Jo dormo a la nit.</div></div></details>
 <details class="verb"><summary><span class="emoji">👂</span><span>ESCOLTAR</span><span class="arrow">⌄</span></summary><div class="inside">
 <div class="row"><span>jo</span><b>escolto</b></div><div class="row"><span>tu</span><b>escoltes</b></div><div class="row"><span>ell / ella</span><b>escolta</b></div><div class="row"><span>nosaltres</span><b>escoltem</b></div><div class="row"><span>vosaltres</span><b>escolteu</b></div><div class="row"><span>ells / elles</span><b>escolten</b></div><div class="example">Nosaltres escoltem la professora.</div></div></details>
-</section></main></body></html>
+</section>
+<h2 class="practice-title">✏️ Practiquem els verbs</h2>
+<p class="lead">Cinc exercicis, de més fàcil a més difícil. Pots consultar les conjugacions de dalt sempre que ho necessitis.</p>
+<div class="levels">
+<button class="level" data-level="1">01 · Reconeix<span>Tria la forma correcta.</span></button>
+<button class="level" data-level="2">02 · Completa<span>Completa una frase.</span></button>
+<button class="level" data-level="3">03 · Canvia la persona<span>Jo → nosaltres, tu → vosaltres...</span></button>
+<button class="level" data-level="4">04 · Barreja de verbs<span>Tria verb i persona.</span></button>
+<button class="level" data-level="5">05 · Repte final<span>10 preguntes · nota final.</span></button>
+</div>
+<div id="practiceApp" class="exercise"></div>
+
+<script>
+const L1=[
+["Jo ___ alumne.","soc",["soc","ets","som"]],["Tu ___ catorze anys.","tens",["tinc","tens","té"]],
+["Ella ___ a Manresa.","viu",["visc","viu","vivim"]],["Nosaltres ___ català.","parlem",["parlo","parlem","parleu"]],
+["Vosaltres ___ a l'institut.","aneu",["vaig","aneu","van"]],["Ells ___ els deures.","fan",["fa","fem","fan"]],
+["Jo ___ una poma.","menjo",["menjo","menges","mengen"]],["Tu ___ una cançó.","cantes",["canto","cantes","cantem"]],
+["Ella ___ a la llibreta.","escriu",["escric","escriu","escriviu"]],["Nosaltres ___ a la nit.","dormim",["dormo","dormim","dormen"]],
+["Vosaltres ___ la professora.","escolteu",["escolto","escolteu","escolten"]]
+];
+const L2=[
+["Nosaltres ___ catorze anys. (TENIR)","tenim",["tenim","teniu","tenen"]],["Ells ___ a Terrassa. (VIURE)","viuen",["vivim","viviu","viuen"]],
+["Tu ___ català. (PARLAR)","parles",["parlo","parles","parla"]],["Ella ___ a l'institut. (ANAR)","va",["vas","va","van"]],
+["Vosaltres ___ els deures. (FER)","feu",["fem","feu","fan"]],["Ell ___ una poma. (MENJAR)","menja",["menges","menja","mengen"]],
+["Nosaltres ___ una cançó. (CANTAR)","cantem",["canto","cantem","canteu"]],["Jo ___ a la llibreta. (ESCRIURE)","escric",["escric","escriu","escrivim"]],
+["Elles ___ a la nit. (DORMIR)","dormen",["dorms","dormim","dormen"]],["Tu ___ la professora. (ESCOLTAR)","escoltes",["escolto","escoltes","escolta"]]
+];
+const L3=[
+["Jo tinc 14 anys. → Nosaltres ___ 14 anys.","tenim",["tenim","teniu","tenen"]],
+["Tu vius a Manresa. → Vosaltres ___ a Manresa.","viviu",["vivim","viviu","viuen"]],
+["Ella parla català. → Elles ___ català.","parlen",["parlem","parleu","parlen"]],
+["Jo vaig a l'institut. → Nosaltres ___ a l'institut.","anem",["anem","aneu","van"]],
+["Tu fas els deures. → Vosaltres ___ els deures.","feu",["fem","feu","fan"]],
+["Ell menja pa. → Ells ___ pa.","mengen",["mengem","mengeu","mengen"]],
+["Jo escric. → Nosaltres ___.","escrivim",["escric","escrivim","escriuen"]],
+["Tu dorms. → Vosaltres ___.","dormiu",["dormim","dormiu","dormen"]],
+["Ella escolta. → Elles ___.","escolten",["escoltem","escolteu","escolten"]]
+];
+const L4=[
+["La Sara i jo ___ a Barcelona.","vivim",["viu","vivim","viuen"]],["En Marc i tu ___ una cançó.","canteu",["cantes","cantem","canteu"]],
+["Els alumnes ___ la professora.","escolten",["escolta","escoltem","escolten"]],["La meva germana ___ tretze anys.","té",["tinc","té","tenen"]],
+["L'Adam i jo ___ els deures.","fem",["faig","fem","fan"]],["Tu i la Sara ___ a l'institut.","aneu",["vas","aneu","van"]],
+["Jo ___ Amina i ___ català.","em dic",["em dic","es diu","ens diem"]],["Nosaltres ___ una carta.","escrivim",["escric","escrivim","escriuen"]],
+["Els meus amics ___ pizza.","mengen",["menjo","mengem","mengen"]],["Tu ___ vuit hores.","dorms",["dormo","dorms","dormen"]]
+];
+const L5=[
+["La Júlia i jo ___ alumnes.","som",["soc","som","són"]],["Vosaltres ___ quinze anys.","teniu",["tenim","teniu","tenen"]],
+["Com ___ tu?","et dius",["em dic","et dius","es diu"]],["Els meus pares ___ a Sabadell.","viuen",["viviu","viuen","vivim"]],
+["Tu i jo ___ català a classe.","parlem",["parles","parlem","parleu"]],["La Maria ___ a l'institut cada dia.","va",["vas","va","van"]],
+["Els alumnes ___ els deures a la tarda.","fan",["fem","feu","fan"]],["Vosaltres ___ fruita al pati.","mengeu",["menges","mengeu","mengen"]],
+["Jo ___ una cançó i tu l'escoltes.","canto",["canto","cantes","canta"]],["Elles ___ una frase a la llibreta.","escriuen",["escriu","escrivim","escriuen"]],
+["Nosaltres ___ vuit hores cada nit.","dormim",["dormo","dormim","dormen"]],["Ell ___ la professora amb atenció.","escolta",["escolto","escolta","escolten"]]
+];
+const banks={1:L1,2:L2,3:L3,4:L4};
+const app=document.getElementById("practiceApp"); let bank=null,idx=0,test=[],ti=0,score=0;
+function sh(a){return [...a].sort(()=>Math.random()-.5)}
+function render(){
+ const x=bank[idx];
+ app.innerHTML=`<div class="progress">Pregunta ${idx+1} de ${bank.length}</div><div class="question">${x[0]}</div><div class="choices">${sh(x[2]).map(v=>`<label class="choice"><input type="radio" name="verbAnswer" value="${v}"> ${v}</label>`).join("")}</div><button class="btn" id="checkVerb">Comprova</button><div id="verbFeedback" class="feedback"></div>`;
+ checkVerb.onclick=()=>{const r=document.querySelector('[name=verbAnswer]:checked');if(!r)return;verbFeedback.innerHTML=r.value===x[1]?"Molt bé! ✓":`La resposta correcta és <b>${x[1]}</b>.`;checkVerb.textContent=idx===bank.length-1?"Torna a començar ↻":"Següent →";checkVerb.onclick=()=>{idx=(idx+1)%bank.length;render()}}
+}
+function startTest(){test=sh(L5).slice(0,10);ti=0;score=0;renderTest()}
+function renderTest(){
+ if(ti===test.length){app.innerHTML=`<div class="score">${score}/10</div><p style="text-align:center"><b>Repte acabat!</b></p><div style="text-align:center"><button class="btn" id="again">Torna-ho a provar</button></div>`;again.onclick=startTest;return}
+ const x=test[ti];app.innerHTML=`<div class="progress">Pregunta ${ti+1} de 10</div><div class="question">${x[0]}</div><div class="choices">${sh(x[2]).map(v=>`<label class="choice"><input type="radio" name="testAnswer" value="${v}"> ${v}</label>`).join("")}</div><button class="btn" id="nextTest">Següent →</button>`;
+ nextTest.onclick=()=>{const r=document.querySelector('[name=testAnswer]:checked');if(!r)return;if(r.value===x[1])score++;ti++;renderTest()}
+}
+document.querySelectorAll(".level").forEach(b=>b.onclick=()=>{
+ document.querySelectorAll(".level").forEach(x=>x.classList.remove("active"));b.classList.add("active");app.classList.add("open");
+ if(b.dataset.level==="5"){startTest();return}
+ bank=banks[b.dataset.level];idx=0;render();
+});
+</script>
+</main></body></html>
